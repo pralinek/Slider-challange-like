@@ -1,0 +1,183 @@
+@use "_variables";
+@use "global";
+@use "mixins";
+
+body{
+    background-image: url("../images/pattern-bg.svg"), url("../images/pattern-quotes.svg"), url("../images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: center 16px, center 361px, bottom left;
+    background-size: 334px 317px, 64px 53px, 261px 70px;
+    
+}
+
+.article{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: transparent;
+    
+}
+
+.picture-container{
+    height: 50vh;
+    width: 100vw;
+     
+}
+.slider{
+    width: 82px;
+    height: 42px;
+    background-color: variables.$greyBlue;
+    border-radius: 500px;
+    margin: auto;
+    z-index: 10;
+    transform: translateY(-3em);
+    background-color: white;
+    -webkit-box-shadow: 0px 6px 18px -11px #000000; 
+    box-shadow: 0px 6px 18px -11px #000000;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+
+    .left, .right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+.pic{
+    background-image: url("../images/image-tanya.jpg"), url("../images/image-john.jpg");
+    
+    width: 255px;
+    height: 255px;
+    background-size: 100%, 0px;
+    margin: 52px auto 27px auto;
+    border-radius: 0.4em;
+    -webkit-box-shadow: 0px 36px 44px -12px rgba(0,0,0,0.32); 
+    box-shadow: 0px 36px 44px -12px rgba(0,0,0,0.32);
+    background-repeat: no-repeat;
+    transition: background-size 300ms ease-out;
+    
+    
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3em 1.5em 0em 1.5em;
+    transition: transform 300ms ease-in;
+    max-width: 900px;
+    margin: 0 auto;
+    
+    &.hidden{
+        
+        display:none;
+         
+    }
+
+   
+}
+
+.text p{
+    font-size: 1.11rem;
+    font-weight: 300;
+    text-align: center;
+    color: variables.$darkBlue;
+    
+    
+}
+
+.person{
+    margin: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 1rem;
+    line-height: 1.3;
+    
+    
+
+    .span{
+        color: variables.$greyBlue;
+       
+    }
+}
+
+
+.attribution{
+    display: none;
+}
+
+@media(min-width:900px){
+
+    body{
+        background-image: url("../images/pattern-bg.svg"), url("../images/pattern-quotes.svg"), url("../images/pattern-curve.svg");
+        background-repeat: no-repeat;
+        background-position: 94.7%, 25% 25%, bottom left;
+        background-size: 700px 660px, 126px 100px, 38vw 18vh;
+        
+    }
+
+    .article{
+        max-width: 78.4vw;
+        margin: 0 auto;
+        flex-flow:row-reverse;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+       
+        
+    }
+    .slider{
+        transform: translateX(-11em) translateY(-3.5em);
+        width: 120px;
+        height: 57px;
+    }
+
+    .picture-container{
+        all:unset;
+    }
+
+    .text{
+        padding-top: 0px;
+        z-index: 10;
+        transform: translateX(6em);
+        .description{
+            width: 650px;
+        }
+        
+    }
+
+    .text>p{
+        padding-top: 0px;
+        text-align: left;
+        font-size: 32px;
+        padding-bottom: 1em;
+        
+    }
+    .person{
+        flex-direction: row;
+        display: flex;
+        
+        align-self: flex-start;
+        .name{
+            color: variables.$darkBlue;
+            font-weight: 700;
+        }
+        .span{
+            padding-left: 0.5em;
+        }
+    }
+   
+
+    .pic{
+        width: 542px;
+        height: 542px;
+       
+    }
+}
