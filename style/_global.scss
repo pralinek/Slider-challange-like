@@ -1,6 +1,8 @@
 /* Box sizing rules */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-
+:root{
+    font-size: 16px;
+}
 *,
 *::before,
 *::after {
@@ -34,7 +36,7 @@ margin: 0;
 /* Set core body defaults */
 body {
 font-family: 'Inter', sans-serif;
-font-size: 32;
+
 min-height: 100vh;
 scroll-behavior: smooth;
 text-rendering: optimizeSpeed;
