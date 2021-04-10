@@ -243,4 +243,17 @@ body {
     width: 542px;
     height: 542px;
   }
+}
+@media (max-width: 360px) {
+  .text {
+    margin-top: 2.5em;
+  }
+
+  .text > p {
+    font-size: 0.8rem;
+  }
+
+  .person > p {
+    font-size: 0.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */
