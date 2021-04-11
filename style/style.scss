@@ -13,7 +13,7 @@ body{
 .article{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     background-color: transparent;
     
     
@@ -54,7 +54,7 @@ body{
     background-image: url("../images/image-tanya.jpg"), url("../images/image-john.jpg");
     
     width: 255px;
-    height: 255px;
+    height: 38vh;
     background-size: 100%, 0px;
     margin: 52px auto 27px auto;
     border-radius: 0.4em;
